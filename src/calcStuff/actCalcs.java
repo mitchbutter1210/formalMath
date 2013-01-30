@@ -95,5 +95,20 @@ public class actCalcs {
 		quadWindow.textField_4.setText(secondAnsFin);
 	}
 	
+	public static void distance(){
+		double x1 = Double.parseDouble(distanceFormula.textField.getText());
+		double x2 = Double.parseDouble(distanceFormula.textField_1.getText());
+		double y1 = Double.parseDouble(distanceFormula.textField_2.getText());
+		double y2 = Double.parseDouble(distanceFormula.textField_3.getText());
+		double xPart1 = x2 - x1;
+		double xPart2 = Math.pow(xPart1, 2);
+		double yPart1 = y2 - y1;
+		double yPart2 = Math.pow(yPart1, 2);
+		double fin = Math.sqrt((xPart2 + yPart2));
+		String ans = Double.toString(fin);
+		distanceFormula.textField_4.setText(ans);
+		
+	}
+	
 
 }

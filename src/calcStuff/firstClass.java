@@ -28,6 +28,7 @@ public class firstClass {
 	private JButton btnSine;
 	private JButton btnCosine;
 	private JButton btnTangent;
+	private JButton btnDistance;
 
 	/**
 	 * Launch the application.
@@ -181,5 +182,14 @@ public class firstClass {
 		});
 		btnTangent.setBounds(314, 441, 117, 25);
 		frmCalculator.getContentPane().add(btnTangent);
+		
+		btnDistance = new JButton("Distance");
+		btnDistance.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				distanceFormula.main(null);
+			}
+		});
+		btnDistance.setBounds(12, 490, 117, 25);
+		frmCalculator.getContentPane().add(btnDistance);
 	}
 }
