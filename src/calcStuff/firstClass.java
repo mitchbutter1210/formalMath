@@ -1,5 +1,7 @@
 package calcStuff;
 
+import java.applet.Applet;
+import java.applet.AudioClip;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -10,6 +12,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.net.URL;
 
 public class firstClass {
 
@@ -141,7 +144,10 @@ public class firstClass {
 		btnSquareRoot = new JButton("Square Root");
 		btnSquareRoot.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				oneInput.main(null);
+				otherWindows.oneInput.main(null);
+				URL url = firstClass.class.getResource("/sounds/button-5.wav");
+				AudioClip click = Applet.newAudioClip(url);
+				click.play();
 			}
 		});
 		btnSquareRoot.setBounds(151, 391, 139, 25);
@@ -150,7 +156,10 @@ public class firstClass {
 		btnQuadratic = new JButton("Quadratic");
 		btnQuadratic.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				quadWindow.main(null);
+				otherWindows.quadWindow.main(null);
+				URL url = firstClass.class.getResource("/sounds/button-5.wav");
+				AudioClip click = Applet.newAudioClip(url);
+				click.play();
 			}
 		});
 		btnQuadratic.setBounds(314, 391, 117, 25);
@@ -159,7 +168,10 @@ public class firstClass {
 		btnSine = new JButton("Sine");
 		btnSine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				oneInput.main(null);
+				otherWindows.oneInput.main(null);
+				URL url = firstClass.class.getResource("/sounds/button-5.wav");
+				AudioClip click = Applet.newAudioClip(url);
+				click.play();
 			}
 		});
 		btnSine.setBounds(12, 441, 117, 25);
@@ -168,7 +180,10 @@ public class firstClass {
 		btnCosine = new JButton("Cosine");
 		btnCosine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				oneInput.main(null);
+				otherWindows.oneInput.main(null);
+				URL url = firstClass.class.getResource("/sounds/button-5.wav");
+				AudioClip click = Applet.newAudioClip(url);
+				click.play();
 			}
 		});
 		btnCosine.setBounds(160, 441, 117, 25);
@@ -177,7 +192,10 @@ public class firstClass {
 		btnTangent = new JButton("Tangent");
 		btnTangent.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				oneInput.main(null);
+				otherWindows.oneInput.main(null);
+				URL url = firstClass.class.getResource("/sounds/button-5.wav");
+				AudioClip click = Applet.newAudioClip(url);
+				click.play();
 			}
 		});
 		btnTangent.setBounds(314, 441, 117, 25);
@@ -186,7 +204,10 @@ public class firstClass {
 		btnDistance = new JButton("Distance");
 		btnDistance.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				distanceFormula.main(null);
+				otherWindows.distanceFormula.main(null);
+				URL url = firstClass.class.getResource("/sounds/button-5.wav");
+				AudioClip click = Applet.newAudioClip(url);
+				click.play();
 			}
 		});
 		btnDistance.setBounds(12, 490, 117, 25);

@@ -1,5 +1,9 @@
 package calcStuff;
 
+import java.applet.Applet;
+import java.applet.AudioClip;
+import java.net.URL;
+
 import javax.swing.JOptionPane;
 
 public class actCalcs {
@@ -11,6 +15,9 @@ public class actCalcs {
 		double fin = x + y;
 		String ans = Double.toString(fin);
 		firstClass.textField_2.setText(ans);
+		URL url = firstClass.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
 	}
 	
 	public static void sub(){
@@ -19,6 +26,9 @@ public class actCalcs {
 		double fin = x - y;
 		String ans = Double.toString(fin);
 		firstClass.textField_2.setText(ans);
+		URL url = firstClass.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
 	}
 	
 	public static void mult(){
@@ -27,6 +37,9 @@ public class actCalcs {
 		double fin = x * y;
 		String ans = Double.toString(fin);
 		firstClass.textField_2.setText(ans);
+		URL url = firstClass.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
 	}
 	
 	public static void div(){
@@ -36,8 +49,14 @@ public class actCalcs {
 		String ans = Double.toString(fin);
 		firstClass.textField_2.setText(ans);
 		if (y == 0){
+			URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+			AudioClip click = Applet.newAudioClip(url);
+			click.play();
 			JOptionPane.showMessageDialog(null, "CANNOT DIVIDE BY ZERO LLLLLOOOOOSSSSIIIIINNNNNGGGGG");
 		}
+		URL url = firstClass.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
 	}
 	
 	public static void power(){
@@ -46,40 +65,55 @@ public class actCalcs {
 		double fin = Math.pow(x, y);
 		String ans = Double.toString(fin);
 		firstClass.textField_2.setText(ans);
+		URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
 	}
 	
 	public static void sqroot(){
-		double x  = Double.parseDouble(oneInput.textField.getText()); 
+		double x  = Double.parseDouble(otherWindows.oneInput.textField.getText()); 
 		double fin = Math.sqrt(x);
 		String ans = Double.toString(fin);
-		oneInput.textField_1.setText(ans);
+		otherWindows.oneInput.textField_1.setText(ans);
+		URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
 	}
 	
 	public static void sin(){
-		double x  = Double.parseDouble(oneInput.textField.getText()); 
+		double x  = Double.parseDouble(otherWindows.oneInput.textField.getText()); 
 		double fin = Math.sin(x);
 		String ans = Double.toString(fin);
-		oneInput.textField_1.setText(ans);
+		otherWindows.oneInput.textField_1.setText(ans);
+		URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
 	}
 	
 	public static void cos(){
-		double x  = Double.parseDouble(oneInput.textField.getText()); 
+		double x  = Double.parseDouble(otherWindows.oneInput.textField.getText()); 
 		double fin = Math.cos(x);
 		String ans = Double.toString(fin);
-		oneInput.textField_1.setText(ans);
+		otherWindows.oneInput.textField_1.setText(ans);
+		URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
 	}
 	
 	public static void tan(){
-		double x  = Double.parseDouble(oneInput.textField.getText()); 
+		double x  = Double.parseDouble(otherWindows.oneInput.textField.getText()); 
 		double fin = Math.tan(x);
 		String ans = Double.toString(fin);
-		oneInput.textField_1.setText(ans);
+		otherWindows.oneInput.textField_1.setText(ans);
+		URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
 	}
 	
 	public static void quadratic(){
-		double a = Double.parseDouble(quadWindow.textField.getText());
-		double b = Double.parseDouble(quadWindow.textField_1.getText());
-		double c = Double.parseDouble(quadWindow.textField_2.getText());
+		double a = Double.parseDouble(otherWindows.quadWindow.textField.getText());
+		double b = Double.parseDouble(otherWindows.quadWindow.textField_1.getText());
+		double c = Double.parseDouble(otherWindows.quadWindow.textField_2.getText());
 		double firstB = -b;
 		//the parts in the square root
 		double secondB = Math.pow(b,2);
@@ -91,23 +125,28 @@ public class actCalcs {
 		double secondAns = (firstB - finSquareRoot) / (2*a);
 		String firstAnsFin = Double.toString(firstAns);
 		String secondAnsFin = Double.toString(secondAns);
-		quadWindow.textField_3.setText(firstAnsFin);
-		quadWindow.textField_4.setText(secondAnsFin);
+		otherWindows.quadWindow.textField_3.setText(firstAnsFin);
+		otherWindows.quadWindow.textField_4.setText(secondAnsFin);
+		URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
 	}
 	
 	public static void distance(){
-		double x1 = Double.parseDouble(distanceFormula.textField.getText());
-		double x2 = Double.parseDouble(distanceFormula.textField_1.getText());
-		double y1 = Double.parseDouble(distanceFormula.textField_2.getText());
-		double y2 = Double.parseDouble(distanceFormula.textField_3.getText());
+		double x1 = Double.parseDouble(otherWindows.distanceFormula.textField.getText());
+		double x2 = Double.parseDouble(otherWindows.distanceFormula.textField_2.getText());
+		double y1 = Double.parseDouble(otherWindows.distanceFormula.textField_1.getText());
+		double y2 = Double.parseDouble(otherWindows.distanceFormula.textField_3.getText());
 		double xPart1 = x2 - x1;
 		double xPart2 = Math.pow(xPart1, 2);
 		double yPart1 = y2 - y1;
 		double yPart2 = Math.pow(yPart1, 2);
 		double fin = Math.sqrt((xPart2 + yPart2));
 		String ans = Double.toString(fin);
-		distanceFormula.textField_4.setText(ans);
-		
+		otherWindows.distanceFormula.textField_4.setText(ans);
+		URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();	
 	}
 	
 
