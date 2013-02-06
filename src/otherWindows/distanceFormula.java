@@ -106,5 +106,18 @@ public class distanceFormula {
 		textField_4.setBounds(60, 267, 185, 22);
 		frmDistanceFormula.getContentPane().add(textField_4);
 		textField_4.setColumns(10);
+		
+		JButton btnNewButton = new JButton("Clear");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				textField.setText("");
+				textField_1.setText("");
+				textField_2.setText("");
+				textField_3.setText("");
+				textField_4.setText("");
+			}
+		});
+		btnNewButton.setBounds(442, 0, 86, 25);
+		frmDistanceFormula.getContentPane().add(btnNewButton);
 	}
 }

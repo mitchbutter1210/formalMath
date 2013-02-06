@@ -149,5 +149,46 @@ public class actCalcs {
 		click.play();	
 	}
 	
+	public static void pyFindA(){
+		double b = Double.parseDouble(otherWindows.pyTheorum.textField_1.getText());
+		double c = Double.parseDouble(otherWindows.pyTheorum.textField_2.getText());
+		double douB = Math.pow(b, 2);
+		double douC = Math.pow(c, 2);
+		double almostFin = douC - douB;
+		double fin = Math.sqrt(almostFin);
+		String ans = Double.toString(fin);
+		otherWindows.pyTheorum.textField.setText(ans);
+		URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
+	}
+	
+	public static void pyFindB(){
+		double a = Double.parseDouble(otherWindows.pyTheorum.textField.getText());
+		double c = Double.parseDouble(otherWindows.pyTheorum.textField_2.getText());
+		double douA = Math.pow(a, 2);
+		double douC = Math.pow(c, 2);
+		double almostFin = douC - douA;
+		double fin = Math.sqrt(almostFin);
+		String ans = Double.toString(fin);
+		otherWindows.pyTheorum.textField_1.setText(ans);
+		URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
+	}
+	
+	public static void pyFindC(){
+		double a = Double.parseDouble(otherWindows.pyTheorum.textField.getText());
+		double b = Double.parseDouble(otherWindows.pyTheorum.textField_1.getText());
+		double douA = Math.pow(a,2);
+		double douB = Math.pow(b,2);
+		double almostFin = douA + douB;
+		double fin = Math.sqrt(almostFin);
+		String ans = Double.toString(fin);
+		otherWindows.pyTheorum.textField_2.setText(ans);
+		URL url = actCalcs.class.getResource("/sounds/button-7.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
+	}
 
 }

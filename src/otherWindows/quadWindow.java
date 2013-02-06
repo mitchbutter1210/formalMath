@@ -21,6 +21,7 @@ public class quadWindow {
 	private JLabel lblEnterC;
 	private JLabel lblAnswer;
 	private JLabel lblAnswer_1;
+	private JButton btnClear;
 
 	/**
 	 * Launch the application.
@@ -108,5 +109,18 @@ public class quadWindow {
 		lblAnswer_1 = new JLabel("Answer 2");
 		lblAnswer_1.setBounds(234, 293, 70, 15);
 		frmQuadriatic.getContentPane().add(lblAnswer_1);
+		
+		btnClear = new JButton("Clear");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText("");
+				textField_1.setText("");
+				textField_2.setText("");
+				textField_3.setText("");
+				textField_4.setText("");
+			}
+		});
+		btnClear.setBounds(317, 0, 89, 25);
+		frmQuadriatic.getContentPane().add(btnClear);
 	}
 }

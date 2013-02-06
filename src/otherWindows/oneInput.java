@@ -18,6 +18,7 @@ public class oneInput {
 	private JButton btnSine;
 	private JButton btnTangent;
 	private JButton btnCosine;
+	private JButton btnClear;
 
 	/**
 	 * Launch the application.
@@ -63,11 +64,11 @@ public class oneInput {
 		frmOneInput.getContentPane().add(textField_1);
 		
 		JLabel lblAnswer = new JLabel("Answer");
-		lblAnswer.setBounds(183, 113, 70, 15);
+		lblAnswer.setBounds(196, 113, 70, 15);
 		frmOneInput.getContentPane().add(lblAnswer);
 		
 		JLabel lblInput = new JLabel("Input");
-		lblInput.setBounds(183, 23, 70, 15);
+		lblInput.setBounds(196, 23, 70, 15);
 		frmOneInput.getContentPane().add(lblInput);
 		
 		JButton btnSquareRoot = new JButton("Square Root");
@@ -105,5 +106,15 @@ public class oneInput {
 		});
 		btnCosine.setBounds(164, 267, 117, 25);
 		frmOneInput.getContentPane().add(btnCosine);
+		
+		btnClear = new JButton("Clear");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText("");
+				textField_1.setText("");
+			}
+		});
+		btnClear.setBounds(366, 0, 82, 25);
+		frmOneInput.getContentPane().add(btnClear);
 	}
 }

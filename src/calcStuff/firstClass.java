@@ -6,6 +6,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import java.awt.Toolkit;
+
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -32,6 +34,7 @@ public class firstClass {
 	private JButton btnCosine;
 	private JButton btnTangent;
 	private JButton btnDistance;
+	private JButton btnPyTheorum;
 
 	/**
 	 * Launch the application.
@@ -186,7 +189,7 @@ public class firstClass {
 				click.play();
 			}
 		});
-		btnCosine.setBounds(160, 441, 117, 25);
+		btnCosine.setBounds(147, 441, 117, 25);
 		frmCalculator.getContentPane().add(btnCosine);
 		
 		btnTangent = new JButton("Tangent");
@@ -212,5 +215,38 @@ public class firstClass {
 		});
 		btnDistance.setBounds(12, 490, 117, 25);
 		frmCalculator.getContentPane().add(btnDistance);
+		
+		JButton btnClear = new JButton("Clear");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				textField.setText("");
+				textField_1.setText("");
+				textField_2.setText("");
+			}
+		});
+		btnClear.setBounds(463, 0, 98, 25);
+		frmCalculator.getContentPane().add(btnClear);
+		
+		JButton btnAbout = new JButton("About");
+		btnAbout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(null, "This progam was made by Brandon, also known as \n" + 
+			"GeneralSnith, HorseMaskInc, or TheBros35.");
+			}
+		});
+		btnAbout.setBounds(463, 37, 98, 25);
+		frmCalculator.getContentPane().add(btnAbout);
+		
+		btnPyTheorum = new JButton("Py Theorum");
+		btnPyTheorum.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				otherWindows.pyTheorum.main(null);
+				URL url = firstClass.class.getResource("/sounds/button-5.wav");
+				AudioClip click = Applet.newAudioClip(url);
+				click.play();
+			}
+		});
+		btnPyTheorum.setBounds(151, 490, 117, 25);
+		frmCalculator.getContentPane().add(btnPyTheorum);
 	}
 }
