@@ -3,7 +3,6 @@ package calcStuff;
 import java.applet.Applet;
 import java.applet.AudioClip;
 import java.net.URL;
-
 import javax.swing.JOptionPane;
 
 public class ActCalcs {
@@ -205,4 +204,72 @@ public class ActCalcs {
 		AudioClip click = Applet.newAudioClip(url);
 		click.play();
 	}
+
+	public static void proportions(){
+		double topLeft = Double.parseDouble(proportionStuff.Proportions.textField.getText());
+		double bottomLeft = Double.parseDouble(proportionStuff.Proportions.textField_1.getText());
+		double topRight = Double.parseDouble(proportionStuff.Proportions.textField_2.getText());
+		double bottomRight = Double.parseDouble(proportionStuff.Proportions.textField_3.getText());
+		double a = topLeft * bottomRight;
+		double b = bottomLeft * topRight;
+		if (a==b){
+			proportionStuff.Proportions.textField_4.setText("Equal");
+		}
+		else if (a!=b){
+			proportionStuff.Proportions.textField_4.setText("Not equal");
+		}
+		URL url = ActCalcs.class.getResource("/sounds/click.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
+	}
+
+	public static void topLeft(){
+		double bottomLeft = Double.parseDouble(proportionStuff.TopLeft.textField_1.getText());
+		double topRight = Double.parseDouble(proportionStuff.TopLeft.textField_2.getText());
+		double bottomRight = Double.parseDouble(proportionStuff.TopLeft.textField_3.getText());
+		double a = bottomLeft * topRight;
+		double b = a / bottomRight;
+		String fin = Double.toString(b);
+		proportionStuff.TopLeft.textField_4.setText(fin);
+	}
+
+	public static void bottomLeft(){
+		double topLeft = Double.parseDouble(proportionStuff.BottomLeft.textField.getText());
+		double topRight = Double.parseDouble(proportionStuff.BottomLeft.textField_1.getText());
+		double bottomRight = Double.parseDouble(proportionStuff.BottomLeft.textField_3.getText());
+		double a = topLeft * bottomRight;
+		double b = a / topRight;
+		String fin = Double.toString(b);
+		proportionStuff.BottomLeft.textField_4.setText(fin);
+		URL url = ActCalcs.class.getResource("/sounds/click.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
+	}
+	
+	public static void topRight(){
+		double topLeft = Double.parseDouble(proportionStuff.TopRight.textField.getText());
+		double bottomLeft = Double.parseDouble(proportionStuff.TopRight.textField_2.getText());
+		double bottomRight = Double.parseDouble(proportionStuff.TopRight.textField_3.getText());
+		double a = topLeft * bottomRight;
+		double b = a / bottomLeft;
+		String fin = Double.toString(b);
+		proportionStuff.TopRight.textField_4.setText(fin);
+		URL url = ActCalcs.class.getResource("/sounds/click.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
+	}
+	
+	public static void bottomRight(){
+		double topLeft = Double.parseDouble(proportionStuff.BottomRight.textField.getText());
+		double bottomLeft = Double.parseDouble(proportionStuff.BottomRight.textField_2.getText());
+		double topRight = Double.parseDouble(proportionStuff.BottomRight.textField_1.getText());
+		double a = bottomLeft * topRight;
+		double b = a / topLeft;
+		String fin = Double.toString(b);
+		proportionStuff.BottomRight.textField_4.setText(fin);
+		URL url = ActCalcs.class.getResource("/sounds/click.wav");
+		AudioClip click = Applet.newAudioClip(url);
+		click.play();
+	}
 }
+

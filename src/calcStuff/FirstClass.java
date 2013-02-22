@@ -25,17 +25,18 @@ public class FirstClass {
 	public static JTextField textField_2;
 	public static JLabel lblSecondNumber;
 	public static JLabel lblAnswer;
-	public static JButton btnNewButton;
-	public static JButton btnNewButton_1;
-	public static JButton btnNewButton_2;
+	public static JButton btnSub;
+	public static JButton btnMultiply;
+	public static JButton btnDivide;
 	public static JButton btnPower;
 	public static JButton btnSquareRoot;
 	public static JButton btnQuadratic;
-	private JButton btnSine;
-	private JButton btnCosine;
-	private JButton btnTangent;
-	private JButton btnDistance;
-	private JButton btnPyTheorum;
+	public static JButton btnSine;
+	public static JButton btnCosine;
+	public static JButton btnTangent;
+	public static JButton btnDistance;
+	public static JButton btnPyTheorum;
+	private JButton btnProportion;
 	/**
 	 * Launch the application.
 	 */
@@ -66,7 +67,7 @@ public class FirstClass {
 		frmCalculator = new JFrame();
 		frmCalculator.setTitle("Calculator");
 		frmCalculator.setIconImage(Toolkit.getDefaultToolkit().getImage(FirstClass.class.getResource("/calcStuff/318930-680071_charlie_sheen_icon.jpg")));
-		frmCalculator.setBounds(100, 100, 563, 604);
+		frmCalculator.setBounds(100, 100, 563, 652);
 		frmCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmCalculator.getContentPane().setLayout(null);
 
@@ -108,32 +109,32 @@ public class FirstClass {
 		btnAdd.setBounds(12, 339, 117, 25);
 		frmCalculator.getContentPane().add(btnAdd);
 		
-		btnNewButton = new JButton("Sub");
-		btnNewButton.addActionListener(new ActionListener() {
+		btnSub = new JButton("Sub");
+		btnSub.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ActCalcs.sub();
 			}
 		});
-		btnNewButton.setBounds(147, 339, 117, 25);
-		frmCalculator.getContentPane().add(btnNewButton);
+		btnSub.setBounds(147, 339, 117, 25);
+		frmCalculator.getContentPane().add(btnSub);
 		
-		btnNewButton_1 = new JButton("Multiply");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		btnMultiply = new JButton("Multiply");
+		btnMultiply.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ActCalcs.mult();
 			}
 		});
-		btnNewButton_1.setBounds(289, 339, 117, 25);
-		frmCalculator.getContentPane().add(btnNewButton_1);
+		btnMultiply.setBounds(289, 339, 117, 25);
+		frmCalculator.getContentPane().add(btnMultiply);
 		
-		btnNewButton_2 = new JButton("Divide");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		btnDivide = new JButton("Divide");
+		btnDivide.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ActCalcs.div();
 			}
 		});
-		btnNewButton_2.setBounds(428, 339, 117, 25);
-		frmCalculator.getContentPane().add(btnNewButton_2);
+		btnDivide.setBounds(428, 339, 117, 25);
+		frmCalculator.getContentPane().add(btnDivide);
 		
 		btnPower = new JButton("Power");
 		btnPower.addActionListener(new ActionListener() {
@@ -267,6 +268,18 @@ public class FirstClass {
 		});
 		btnSlope.setBounds(289, 490, 117, 25);
 		frmCalculator.getContentPane().add(btnSlope);
+		
+		btnProportion = new JButton("Proportion");
+		btnProportion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				proportionStuff.Proportions.main(null);
+				URL url = FirstClass.class.getResource("/sounds/open.wav");
+				AudioClip click = Applet.newAudioClip(url);
+				click.play();
+			}
+		});
+		btnProportion.setBounds(12, 538, 117, 25);
+		frmCalculator.getContentPane().add(btnProportion);
 		
 	}
 }
