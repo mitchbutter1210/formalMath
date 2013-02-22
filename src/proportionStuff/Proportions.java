@@ -13,6 +13,7 @@ import calcStuff.ActCalcs;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.net.URL;
+import java.awt.Toolkit;
 
 public class Proportions {
 
@@ -53,6 +54,7 @@ public class Proportions {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(Proportions.class.getResource("/calcStuff/318930-680071_charlie_sheen_icon.jpg")));
 		frame.setTitle("Proportions");
 		frame.setBounds(100, 100, 450, 314);
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

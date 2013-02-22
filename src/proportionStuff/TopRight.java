@@ -1,6 +1,7 @@
 package proportionStuff;
 
 import java.awt.EventQueue;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -45,6 +46,7 @@ public class TopRight {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(Proportions.class.getResource("/calcStuff/318930-680071_charlie_sheen_icon.jpg")));
 		frame.setTitle("Top Right");
 		frame.setBounds(100, 100, 450, 314);
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

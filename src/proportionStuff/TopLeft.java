@@ -1,6 +1,7 @@
 package proportionStuff;
 
 import java.awt.EventQueue;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
@@ -46,6 +47,7 @@ public class TopLeft {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(Proportions.class.getResource("/calcStuff/318930-680071_charlie_sheen_icon.jpg")));
 		frame.setTitle("Top Left");
 		frame.setBounds(100, 100, 450, 314);
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

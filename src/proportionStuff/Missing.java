@@ -3,6 +3,7 @@ package proportionStuff;
 import java.applet.Applet;
 import java.applet.AudioClip;
 import java.awt.EventQueue;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
@@ -45,6 +46,7 @@ public class Missing {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(Proportions.class.getResource("/calcStuff/318930-680071_charlie_sheen_icon.jpg")));
 		frame.setTitle("Missing?");
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
